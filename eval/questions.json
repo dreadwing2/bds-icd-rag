@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "description": "北斗文档检索评测集。金标准为 block_id，semantic 与 hierarchical 的命中判定都按检索结果包含的 block_ids 计算。",
+  "questions": [
+    {
+      "qid": "q01",
+      "question": "B1C 信号数据分量的符号速率是多少？",
+      "answer": "100 sps；导频分量为 0 sps。",
+      "type": "table",
+      "gold_block_ids": [
+        "bds-b1c-icd-1.0:p009:b07"
+      ]
+    },
+    {
+      "qid": "q02",
+      "question": "B1C 信号数据分量和导频分量的主码码长、主码周期、子码码长、子码周期分别是多少？",
+      "answer": "数据分量：主码 10230、周期 10 ms，无子码；导频分量：主码 10230、周期 10 ms，子码 1800、周期 18000 ms。",
+      "type": "table",
+      "gold_block_ids": [
+        "bds-b1c-icd-1.0:p014:b09"
+      ]
+    },
+    {
+      "qid": "q03",
+      "question": "B-CNAV1 导航电文每帧长度、符号速率和播发周期分别是多少？",
+      "answer": "1800 符号位，100 sps，18 秒。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-b1c-icd-1.0:p022:b03"
+      ]
+    },
+    {
+      "qid": "q04",
+      "question": "B1C 信号数据分量、导频分量 a 和导频分量 b 的功率比分别是多少？",
+      "answer": "1/4、29/44、1/11。",
+      "type": "table",
+      "gold_block_ids": [
+        "bds-b1c-icd-1.0:p012:b05"
+      ]
+    },
+    {
+      "qid": "q05",
+      "question": "B1I 信号测距码 CB1I 的码速率和码长是多少？",
+      "answer": "2.046 Mcps，码长 2046。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-b1i-icd-3.0:p009:b10"
+      ]
+    },
+    {
+      "qid": "q06",
+      "question": "D1 和 D2 导航电文的速率分别是多少？",
+      "answer": "D1 为 50 bps，并调制 1 kbps 的二次编码；D2 为 500 bps。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-b1i-icd-3.0:p012:b05"
+      ]
+    },
+    {
+      "qid": "q07",
+      "question": "D1 导航电文上调制的二次编码采用什么码型？",
+      "answer": "Neumann-Hoffman（NH）码。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-b1i-icd-3.0:p019:b05"
+      ]
+    },
+    {
+      "qid": "q08",
+      "question": "BDSBAS 的坐标基准是什么？",
+      "answer": "WGS-84。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-bdsbas-b1c-icd-1.0:p009:b05"
+      ]
+    },
+    {
+      "qid": "q09",
+      "question": "BDSBAS 的空间星座由几颗卫星组成，分别定点在什么经度？",
+      "answer": "3 颗北斗三号 GEO 卫星，定点于东经 80 度、110.5 度和 140 度，PRN 分别为 144、143、130。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-bdsbas-b1c-icd-1.0:p009:b03"
+      ]
+    },
+    {
+      "qid": "q10",
+      "question": "BDSBAS-B1C 信号的落地功率范围是多少？",
+      "answer": "-161 dBW 到 -153 dBW。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-bdsbas-b1c-icd-1.0:p011:b04"
+      ]
+    },
+    {
+      "qid": "q11",
+      "question": "BDSBAS 电文0 的用途是什么？",
+      "answer": "系统测试电文，提示用户不要将 BDSBAS-B1C 增强信息用于生命安全服务；收到后至少停止使用该信号 1 分钟。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-bdsbas-b1c-icd-1.0:p013:b05"
+      ]
+    },
+    {
+      "qid": "q12",
+      "question": "PPP-B2b 信号 I 支路的载波频率、调制方式和符号速率分别是多少？",
+      "answer": "1207.14 MHz，BPSK(10)，1000 sps。",
+      "type": "table",
+      "gold_block_ids": [
+        "bds-ppp-b2b-icd-1.0:p011:b05"
+      ]
+    },
+    {
+      "qid": "q13",
+      "question": "PPP-B2b 信号 I 支路测距码的码速率和码长是多少？",
+      "answer": "10.23 Mcps，码长 10230。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-ppp-b2b-icd-1.0:p013:b02"
+      ]
+    },
+    {
+      "qid": "q14",
+      "question": "PPP-B2b 的信息类型 1 到 7 分别对应什么内容？",
+      "answer": "1 卫星掩码；2 卫星轨道改正数及用户测距精度指数；3 码间偏差改正数；4 卫星钟差改正数；5 用户测距精度指数；6 钟差改正数与轨道改正数-组合1；7 钟差改正数与轨道改正数-组合2。",
+      "type": "table",
+      "gold_block_ids": [
+        "bds-ppp-b2b-icd-1.0:p018:b06",
+        "北斗卫星导航系统:p027:b08"
+      ]
+    },
+    {
+      "qid": "q15",
+      "question": "PPP-B2b 信息类型4 中历元时刻字段占多少比特，取值范围是多少？",
+      "answer": "17 比特，0～86399 秒。",
+      "type": "table",
+      "gold_block_ids": [
+        "bds-ppp-b2b-icd-1.0:p025:b09"
+      ]
+    },
+    {
+      "qid": "q16",
+      "question": "北斗系统由哪三部分组成？",
+      "answer": "空间段、地面段、用户段。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-dev-report-3.0:p007:b08"
+      ]
+    },
+    {
+      "qid": "q17",
+      "question": "北斗系统“三步走”发展战略的三步分别建设哪个系统？",
+      "answer": "第一步北斗一号系统，第二步北斗二号系统，第三步北斗三号系统。",
+      "type": "cross_block",
+      "gold_block_ids": [
+        "bds-dev-report-3.0:p008:b03",
+        "北斗卫星导航系统:p005:b02",
+        "bds-white-paper-2016:p007:b04",
+        "bds-white-paper-2016:p008:b01"
+      ]
+    },
+    {
+      "qid": "q18",
+      "question": "截至 2018 年 12 月，北斗系统在轨工作卫星共多少颗，三类轨道各多少颗？",
+      "answer": "33 颗；5 颗 GEO、7 颗 IGSO、21 颗 MEO。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-dev-report-3.0:p011:b03"
+      ]
+    },
+    {
+      "qid": "q19",
+      "question": "北斗系统建设发展坚持哪些原则？",
+      "answer": "自主、开放、兼容、渐进。",
+      "type": "cross_block",
+      "gold_block_ids": [
+        "bds-white-paper-2016:p005:b06",
+        "bds-white-paper-2016:p006:b01",
+        "bds-dev-report-3.0:p007:b02",
+        "bds-dev-report-3.0:p007:b06"
+      ]
+    },
+    {
+      "qid": "q20",
+      "question": "2016 年白皮书中，北斗二号公开服务的服务区范围和定位、测速、授时精度分别是多少？",
+      "answer": "南北纬 55 度、东经 55 度到 180 度；定位优于 10 米，测速优于 0.2 米/秒，授时优于 50 纳秒。",
+      "type": "text",
+      "gold_block_ids": [
+        "bds-white-paper-2016:p012:b02"
+      ]
+    },
+    {
+      "qid": "q21",
+      "question": "北斗系统公开服务性能规范涵盖哪几类服务？",
+      "answer": "RNSS、PPP、RSMC、SAR、GAS。",
+      "type": "text",
+      "gold_block_ids": [
+        "北斗卫星导航系统:p011:b02"
+      ]
+    },
+    {
+      "qid": "q22",
+      "question": "北斗系统采用的坐标系统是什么，对准哪个参考框架，多久更新一次？",
+      "answer": "BDCS，采用 CGCS2000 参考椭球参数，对准最新 ITRF，每年更新一次。",
+      "type": "text",
+      "gold_block_ids": [
+        "北斗卫星导航系统:p014:b09"
+      ]
+    },
+    {
+      "qid": "q23",
+      "question": "北斗系统 RNSS 服务的 5 个空间信号分别是什么？",
+      "answer": "B1C、B2a、B2b、B1I、B3I。",
+      "type": "text",
+      "gold_block_ids": [
+        "北斗卫星导航系统:p016:b07",
+        "北斗卫星导航系统:p017:b01"
+      ]
+    },
+    {
+      "qid": "q24",
+      "question": "北斗系统单系统 PPP 服务的水平定位精度、垂直定位精度和收敛时间指标是多少？",
+      "answer": "水平 ≤0.3 米，垂直 ≤0.6 米，收敛时间 ≤30 分钟（95%）。",
+      "type": "table",
+      "gold_block_ids": [
+        "北斗卫星导航系统:p028:b06"
+      ]
+    },
+    {
+      "qid": "q25",
+      "question": "北斗区域短报文通信服务通过哪几颗卫星的什么频段提供？",
+      "answer": "3 颗 GEO 卫星的 L 频段和 S 频段。",
+      "type": "text",
+      "gold_block_ids": [
+        "北斗卫星导航系统:p029:b03"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# ===== 核心 =====
+numpy==1.26.4
+torch==2.6.0               # 本项目验证环境为 CUDA 12.4 版本，请按平台选择安装命令
+transformers==4.55.0
+sentencepiece==0.2.2
+faiss-cpu==1.15.1
+rank-bm25==0.2.2
+jieba==0.42.1
+
+# ===== PDF 解析 =====
+pymupdf==1.28.2
+pdfplumber==0.11.9
+
+# ===== 检索评估 / LLM 调用 =====
+openai==1.109.1
+langchain-openai==0.3.28
+ragas==0.4.3
+datasets==4.0.0
+
+# ===== 可选：扫描页 OCR =====
+# 默认关闭。未安装时扫描页会降级为"跳过内容"，主流程不受影响。
+# 如需启用，除 pip 安装外还需自行安装 tesseract 及中文语言包 chi_sim。
+# pytesseract>=0.3.13
+# pillow>=10.0.0
